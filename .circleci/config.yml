@@ -21,7 +21,7 @@ jobs:
           command: |
             INV=".circleci/ansible/inventory.txt"
             echo "[web]" > $INV
-            echo "HELLOOOOOO"
+            echo "HELLOOOOOO" >> $INV
             tail $INV
 
       # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
@@ -39,12 +39,12 @@ jobs:
       - checkout
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp/.circleci/ansible
+          at: /tmp
 
       - run:
           name: "Load"
           command: |
-            INV="/tmp/.circleci/ansible/inventory.txt"
+            INV="/tmp/inventory.txt"
             tail $INV
           # if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
           #   echo "It worked!";
