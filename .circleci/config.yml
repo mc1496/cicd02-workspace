@@ -39,7 +39,7 @@ jobs:
       - checkout
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp
+          at: /tmp/project/.circleci/ansible/
 
       - run:
           name: "Load"
@@ -56,7 +56,7 @@ jobs:
           name: "Load2"
           command: |
             ls /tmp/
-            INV="tmp/.circleci/ansible/inventory.txt"
+            INV="/tmp/project/.circleci/ansible/inventory.txt"
             tail $INV
           # if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
           #   echo "It worked!";
