@@ -57,8 +57,8 @@ jobs:
           command: |
             ls /tmp
             ls /tmp/project
-            ls /tmp/project/.crcleci
-            ls /tmp/project/.crcleci/ansible
+            ls /tmp/project/.circleci
+            ls /tmp/project/.circleci/ansible
             ls ~/project
             INV="/tmp/project/.circleci/ansible/inventory.txt"
             tail $INV
