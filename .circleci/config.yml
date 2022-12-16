@@ -39,7 +39,7 @@ jobs:
       - checkout
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp/project/.circleci/ansible/
+          at: /tmp
 
       - run:
           name: "Load"
@@ -63,11 +63,10 @@ jobs:
             ls -al  /tmp/project/.circleci
             echo "ls ansible"
             ls -al /tmp/project/.circleci/ansible
-            echo " a project inside ansible ???"
-            ls -al /tmp/project/.circleci/ansible/project
-
-            echo "ls home-project"
-            ls -al ~/project
+            #echo " a project inside ansible ???"
+            #ls -al /tmp/project/.circleci/ansible/project
+            #echo "ls home-project"
+            #ls -al ~/project
             INV="/tmp/project/.circleci/ansible/inventory.txt"
             tail $INV
           # if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
