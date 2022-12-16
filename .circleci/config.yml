@@ -22,7 +22,7 @@ jobs:
             INV=".circleci/ansible/inventory.txt"
             echo "[web]" > $INV
             echo "HELLOOOOOO"
-            tain $INV
+            tail $INV
 
       # Persist the specified paths (workspace/echo-output) into the workspace for use in downstream job.
       - persist_to_workspace:
