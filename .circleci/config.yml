@@ -44,6 +44,7 @@ jobs:
       - run:
           name: "Load"
           command: |
+            ls /tmp
             INV="/tmp/.circleci/ansible/inventory.txt"
             tail $INV
           # if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
