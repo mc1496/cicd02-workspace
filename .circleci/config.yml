@@ -59,6 +59,7 @@ jobs:
             ls /tmp/project
             ls /tmp/project/.crcleci
             ls /tmp/project/.crcleci/ansible
+            ls ~/project
             INV="/tmp/project/.circleci/ansible/inventory.txt"
             tail $INV
           # if [[ `cat /tmp/workspace/echo-output` == "Hello, world!" ]]; then
